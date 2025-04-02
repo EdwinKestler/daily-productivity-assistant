@@ -1,0 +1,89 @@
+# 🧠 Daily Productivity Assistant
+
+This Python-based assistant helps you manage your personal productivity using:
+- Daily planning prompts
+- Pomodoro-based work cycles (25+5)
+- Cross-platform notifications
+- Task completion tracking
+- Weekly performance reports with charts
+
+---
+
+## 📁 Project Structure
+
+```
+daily_productivity_assistant/
+├── main.py                  # Entry point, schedules and triggers
+├── planner.py               # Daily input: tasks, goals, objectives
+├── pomodoro.py              # Pomodoro timer with notifications
+├── review.py                # Completion verification prompts
+├── report.py                # Weekly performance summary
+├── ui/
+│   ├── notifications.py     # Cross-platform toast notifications
+│   └── charts.py            # Matplotlib task visualizations
+├── utils/
+│   └── time_utils.py        # Helper functions for time logic
+└── storage/
+    └── tasks.json           # Daily task log (auto-created)
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
+```bash
+pip install plyer matplotlib schedule
+```
+
+### 2. Run the App
+```bash
+python main.py
+```
+
+The app will:
+- Prompt you at **08:20** for task planning.
+- Start Pomodoro blocks at scheduled project hours.
+- Notify and verify task completion.
+- Show a performance report every **Sunday at 18:00**.
+
+---
+
+## ⏱️ Pomodoro Workflow
+Each project work block runs:
+- **25 minutes of focus time**
+- **5 minutes of review/research**
+
+Notifications will appear before and after each phase.
+
+---
+
+## 📊 Weekly Reports
+Every Sunday, a performance summary is printed and visualized:
+- Tasks completed vs. total
+- List of tracked objectives
+- Chart output for visual insights
+
+---
+
+## 🧰 Coming Enhancements
+- Export logs as Markdown/CSV
+- Notion or Telegram integration
+- System tray or GUI wrapper
+
+---
+
+## 🧪 Example Custom Run
+To trigger planning manually:
+```python
+from planner import daily_planner_prompt
+from report import generate_weekly_report
+
+daily_planner_prompt()
+generate_weekly_report()
+```
+
+---
+
+## ✅ License
+Open-source under MIT License.
