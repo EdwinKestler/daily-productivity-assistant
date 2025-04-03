@@ -1,89 +1,116 @@
 # 🧠 Daily Productivity Assistant
 
-This Python-based assistant helps you manage your personal productivity using:
-- Daily planning prompts
-- Pomodoro-based work cycles (25+5)
-- Cross-platform notifications
-- Task completion tracking
-- Weekly performance reports with charts
+A modular productivity system that helps you:
+- Plan your day using a goal-task-objective model
+- Focus using a Pomodoro engine with a visual timer
+- Review progress task-by-task
+- See weekly performance reports and visual charts
+- Launch everything from a system tray icon (Windows)
 
 ---
 
-## 📁 Project Structure
+## ✨ Features
 
-```
-daily_productivity_assistant/
-├── main.py                  # Entry point, schedules and triggers
-├── planner.py               # Daily input: tasks, goals, objectives
-├── pomodoro.py              # Pomodoro timer with notifications
-├── review.py                # Completion verification prompts
-├── report.py                # Weekly performance summary
+- ⏱ Pomodoro-based timeboxing per project
+- 📝 Daily task planning (GUI)
+- ✅ Completion review (GUI with checkboxes)
+- 📊 Weekly charts and performance reports
+- 🎯 Goal + Objective linking per task group
+- 🖥️ Windows tray launcher for 1-click access
+
+---
+
+## 📁 File Structure (simplified)
+
+📂 Folder Structure
+
 ├── ui/
-│   ├── notifications.py     # Cross-platform toast notifications
-│   └── charts.py            # Matplotlib task visualizations
-├── utils/
-│   └── time_utils.py        # Helper functions for time logic
-└── storage/
-    └── tasks.json           # Daily task log (auto-created)
-```
-
+│   ├── gui_planner.py        # Daily task input
+│   ├── gui_review.py         # Task completion review
+│   ├── gui_launcher.py       # Tkinter GUI for launching tools
+│   ├── tray_launcher.py      # System tray launcher
+│   ├── charts.py             # Matplotlib reports
+│   └── notifications.py      # (Optional future extension)
+├── report.py                 # Weekly reporting logic
+├── pomodoro.py               # Visual Pomodoro logic
+├── storage/
+│   └── tasks.json            # Daily records (auto-created)
+├── generate_icon.py          # Creates .ico file for shortcut icon
+├── requirements.txt
+├── setup.py
+└── docs/
+    ├── customization_guide.md
+    └── usage_scenarios.md
 ---
 
-## 🚀 Getting Started
+## 🚀 Running the Assistant
 
-### 1. Install Dependencies
+### 1. Start from Tray (Windows preferred)
+
 ```bash
-pip install plyer matplotlib schedule
-```
+python -m ui.tray_launcher
+This adds a ✔️ icon to your system tray with quick-launch options.
 
-### 2. Run the App
-```bash
-python main.py
-```
+2. Manual Entry (Optional)
+bash
+Copy
+Edit
+python -m ui.gui_planner      # Plan tasks
+python -m ui.gui_review       # Review task completion
+python -m ui.charts           # See weekly visual chart
+python -m report              # Text-based summary
+🧰 Windows Startup Instructions
+Open Startup folder:
 
-The app will:
-- Prompt you at **08:20** for task planning.
-- Start Pomodoro blocks at scheduled project hours.
-- Notify and verify task completion.
-- Show a performance report every **Sunday at 18:00**.
+css
+Copy
+Edit
+%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+Create a new shortcut with:
 
----
+arduino
+Copy
+Edit
+"C:\Path\To\.venv\Scripts\python.exe" -m ui.tray_launcher
+Right-click → Properties → Change Icon → Select productivity_icon.ico.
 
-## ⏱️ Pomodoro Workflow
-Each project work block runs:
-- **25 minutes of focus time**
-- **5 minutes of review/research**
+📚 Docs Available
+docs/architecture_diagram.md
 
-Notifications will appear before and after each phase.
+docs/customization_guide.md
 
----
+docs/usage_scenarios.md
 
-## 📊 Weekly Reports
-Every Sunday, a performance summary is printed and visualized:
-- Tasks completed vs. total
-- List of tracked objectives
-- Chart output for visual insights
-
----
-
-## 🧰 Coming Enhancements
-- Export logs as Markdown/CSV
-- Notion or Telegram integration
-- System tray or GUI wrapper
-
----
-
-## 🧪 Example Custom Run
-To trigger planning manually:
-```python
-from planner import daily_planner_prompt
-from report import generate_weekly_report
-
-daily_planner_prompt()
-generate_weekly_report()
-```
+yaml
+Copy
+Edit
 
 ---
 
-## ✅ License
-Open-source under MIT License.
+## ✅ `docs/updates.md` (new or appended section)
+
+```markdown
+# 🔄 UI & Tray Launcher Updates
+
+## 🖥️ Tray Icon (Windows)
+- Located in `ui/tray_launcher.py`
+- Adds a system tray menu with:
+  - Planner
+  - Review
+  - Weekly Report
+  - Pomodoro Timer
+  - Exit
+
+## 🔧 Storage Fixes
+- All subprocesses now use `subprocess.run()` to ensure correct file paths.
+- Fixed bug where GUI edits didn’t persist to `tasks.json`.
+
+## 🧱 GUI Improvements
+- `gui_planner.py` now allows dynamic `+Task` with Pomodoro-limited caps.
+- `gui_review.py` supports per-task checkboxes.
+- Tasks, goal, and objectives persist per day and project.
+
+## 🧪 Testing Tip
+To verify correct save location:
+- Check that changes appear in `storage/tasks.json`
+- Look for `completed`, `task_status`, and `note` fields per project block
