@@ -3,6 +3,7 @@
 import json
 import os
 from datetime import datetime
+from typing import TextIO
 
 DATA_DIR = "storage"
 FILE_PATH = os.path.join(DATA_DIR, "tasks.json")
@@ -16,6 +17,7 @@ def load_tasks():
 
 
 def save_tasks(data):
+    f: TextIO
     with open(FILE_PATH, 'w') as f:
         json.dump(data, f, indent=2)
 
