@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+
+# Environment variables / system files
+.env
+.DS_Store
+
+# Storage
+/storage/tasks.json
