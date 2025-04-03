@@ -87,6 +87,7 @@ You can:
 - Use SQLite with `sqlite3` for structured querying
 - Export weekly logs to CSV/Markdown
 - Backup to cloud drive
+- generate an .ICS file to export your daily tasks
 
 ✅ Tip: Use `report.py` as base to write custom export scripts.
 
