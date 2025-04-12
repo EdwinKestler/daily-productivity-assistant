@@ -17,7 +17,6 @@ def load_tasks():
 
 
 def save_tasks(data):
-    f: TextIO
     with open(FILE_PATH, 'w') as f:
         json.dump(data, f, indent=2)
 

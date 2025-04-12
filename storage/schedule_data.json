@@ -1,0 +1,128 @@
+[
+  [
+    "Wake up",
+    "06:00",
+    "06:15",
+    "✅ Do First",
+    "Essential to start the day properly"
+  ],
+  [
+    "Assist kids (wake, prep, breakfast)",
+    "06:15",
+    "06:45",
+    "✅ Do First",
+    "Family priority"
+  ],
+  [
+    "Drop kids at school",
+    "06:45",
+    "07:09",
+    "✅ Do First",
+    "Must happen on time"
+  ],
+  [
+    "Return home (traffic)",
+    "07:09",
+    "07:35",
+    "🤝 Delegate if possible",
+    "Could be delegated or optimized"
+  ],
+  [
+    "Breakfast",
+    "07:35",
+    "08:00",
+    "🧠 Plan",
+    "Important for energy"
+  ],
+  [
+    "Social media (trends, news)",
+    "08:00",
+    "08:20",
+    "❌ Eliminate/Limit",
+    "Timeboxed — easily addictive"
+  ],
+  [
+    "Buffer / Review / Planning",
+    "08:20",
+    "08:30",
+    "🧠 Plan",
+    "Helps set intent"
+  ],
+  [
+    "Online learning",
+    "09:19",
+    "10:30",
+    "🧠 Plan",
+    "Invests in long-term capability"
+  ],
+  [
+    "Self-care: walk + swim",
+    "10:30",
+    "11:15",
+    "🧠 Plan",
+    "Important for longevity & wellness"
+  ],
+  [
+    "Shower & dress",
+    "11:15",
+    "12:30",
+    "✅ Do First",
+    "Non-negotiable hygiene"
+  ],
+  [
+    "Pick up kids",
+    "12:30",
+    "12:45",
+    "✅ Do First",
+    "Family priority"
+  ],
+  [
+    "Feed kids lunch",
+    "12:45",
+    "13:30",
+    "✅ Do First",
+    "Important caregiver task"
+  ],
+  [
+    "Quick nap",
+    "13:30",
+    "14:20",
+    "🧠 Plan",
+    "Rest is important but not urgent"
+  ],
+  [
+    "Work on Flatbox (Micro Enterprise #1)",
+    "14:20",
+    "17:00",
+    "🧠 Plan",
+    "Long-term growth"
+  ],
+  [
+    "Work on Robocrops (Startup #2)",
+    "17:00",
+    "18:30",
+    "🧠 Plan",
+    "Long-term growth"
+  ],
+  [
+    "Work on Ereditas (Startup #3)",
+    "18:30",
+    "21:30",
+    "🧠 Plan",
+    "Long-term vision"
+  ],
+  [
+    "Coding session (backlog/exploration)",
+    "21:30",
+    "23:00",
+    "🧠 Plan or ❌ (partial)",
+    "Limit exploration without goals"
+  ],
+  [
+    "Wind down & sleep",
+    "23:00",
+    "23:15",
+    "✅ Do First",
+    "Foundation for next day"
+  ]
+]
